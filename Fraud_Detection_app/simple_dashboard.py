@@ -71,7 +71,7 @@ def main():
     """Main dashboard function"""
     
     # Header
-    st.markdown('<h1 class="main-header">🚨 Simple Credit Card Fraud Detection</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header"> Simple Credit Card Fraud Detection</h1>', unsafe_allow_html=True)
     
     # Load detector
     detector, model_loaded = load_or_create_detector()

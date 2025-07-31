@@ -11,7 +11,7 @@ from simple_fraud_detection import SimpleFraudDetector
 
 def test_data_generation():
     """Test data generation"""
-    print("🧪 Testing data generation...")
+    print(" Testing data generation...")
     
     detector = SimpleFraudDetector()
     data = detector.generate_synthetic_data(n_samples=1000, fraud_ratio=0.01)
@@ -25,7 +25,7 @@ def test_data_generation():
 
 def test_feature_engineering():
     """Test feature engineering"""
-    print("🧪 Testing feature engineering...")
+    print(" Testing feature engineering...")
     
     detector = SimpleFraudDetector()
     data = detector.generate_synthetic_data(n_samples=100, fraud_ratio=0.01)
@@ -43,7 +43,7 @@ def test_feature_engineering():
 
 def test_model_training():
     """Test model training"""
-    print("🧪 Testing model training...")
+    print(" Testing model training...")
     
     detector = SimpleFraudDetector()
     data = detector.generate_synthetic_data(n_samples=1000, fraud_ratio=0.05)  # Higher fraud ratio
@@ -70,7 +70,7 @@ def test_model_training():
 
 def test_prediction():
     """Test prediction functionality"""
-    print("🧪 Testing prediction...")
+    print(" Testing prediction...")
     
     detector = SimpleFraudDetector()
     
@@ -109,7 +109,7 @@ def test_prediction():
 
 def test_model_persistence():
     """Test model save/load functionality"""
-    print("🧪 Testing model persistence...")
+    print(" Testing model persistence...")
     
     detector = SimpleFraudDetector()
     
@@ -148,7 +148,7 @@ def test_model_persistence():
 
 def run_all_tests():
     """Run all tests"""
-    print("🚀 Running Simple Fraud Detection Tests")
+    print(" Running Simple Fraud Detection Tests")
     print("=" * 50)
     
     try:
@@ -159,14 +159,14 @@ def run_all_tests():
         test_model_persistence()
         
         print("\n" + "=" * 50)
-        print("🎉 ALL TESTS PASSED!")
+        print(" ALL TESTS PASSED!")
         print("✅ System is working correctly")
         print("=" * 50)
         
         return True
         
     except Exception as e:
-        print(f"\n❌ Test failed: {e}")
+        print(f"\n Test failed: {e}")
         print("🔧 Please check your installation and try again")
         return False
 

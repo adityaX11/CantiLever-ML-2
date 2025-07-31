@@ -126,7 +126,7 @@ class SimpleFraudDetector:
         """
         Train multiple models and find the best one
         """
-        print("🤖 Training models...")
+        print(" Training models...")
         
         # Define models
         models = {
@@ -184,7 +184,7 @@ class SimpleFraudDetector:
         """
         Evaluate models on test set
         """
-        print("📊 Evaluating models...")
+        print("Evaluating models...")
         
         results = {}
         
@@ -343,23 +343,23 @@ class SimpleFraudDetector:
         self.best_score = model_data['best_score']
         
         print(f"✅ Model loaded from {filepath}")
-        print(f"🏆 Best model: {self.best_model} (Score: {self.best_score:.4f})")
+        print(f"Best model: {self.best_model} (Score: {self.best_score:.4f})")
     
     def run_full_pipeline(self, n_samples=10000, fraud_ratio=0.01, save_model=True):
         """
         Run the complete fraud detection pipeline
         """
-        print("🚨 Simple Credit Card Fraud Detection System")
+        print("Simple Credit Card Fraud Detection System")
         print("=" * 50)
         
         # Step 1: Generate data
-        print("📊 Generating synthetic data...")
+        print("Generating synthetic data...")
         data = self.generate_synthetic_data(n_samples, fraud_ratio)
         print(f"   Data shape: {data.shape}")
         print(f"   Fraud ratio: {data['Class'].mean():.3f}")
         
         # Step 2: Prepare data
-        print("\n🔧 Preparing data...")
+        print("\n Preparing data...")
         X, y = self.prepare_data(data)
         print(f"   Features: {len(self.feature_names)}")
         
@@ -376,15 +376,15 @@ class SimpleFraudDetector:
         print(f"   Test shape: {X_test.shape}")
         
         # Step 5: Train models
-        print("\n🤖 Training models...")
+        print("\n Training models...")
         self.train_models(X_train_scaled, y_train)
         
         # Step 6: Evaluate models
-        print("\n📊 Evaluating models...")
+        print("\n Evaluating models...")
         results = self.evaluate_models(X_test_scaled, y_test)
         
         # Step 7: Plot results
-        print("\n📈 Creating visualizations...")
+        print("\n Creating visualizations...")
         self.plot_results(X_test_scaled, y_test, results)
         
         # Step 8: Save model
@@ -431,9 +431,9 @@ def main():
     print(f"   Probability: {prediction['probability']:.3f}")
     print(f"   Confidence: {prediction['confidence']:.3f}")
     
-    print("\n🎉 System ready for use!")
-    print("📁 Check 'fraud_detection_results.png' for visualizations")
-    print("💾 Model saved as 'fraud_detection_model.joblib'")
+    print("\n System ready for use!")
+    print(" Check 'fraud_detection_results.png' for visualizations")
+    print(" Model saved as 'fraud_detection_model.joblib'")
 
 if __name__ == "__main__":
     main() 
